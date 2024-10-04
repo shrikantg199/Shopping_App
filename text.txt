@@ -1,0 +1,4 @@
+create project from the scratch =>(Javascript)
+tailwind css
+add first splash screen  (figma)
+add main splash screen
