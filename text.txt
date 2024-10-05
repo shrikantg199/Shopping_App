@@ -1,4 +1,11 @@
-create project from the scratch =>(Javascript)
-tailwind css
-add first splash screen  (figma)
-add main splash screen
+create project from the scratch =>(Javascript) =>Done
+tailwind css =>done
+add first splash screen  (figma)=>done => working
+now prebuild => it take at least 5 mins or sometimes more🥲🥲 =>Done
+add main splash screen =>Done
+
+
+
+
+Log in , Log out, Forgot Password
+get started screen
