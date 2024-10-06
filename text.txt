@@ -1,3 +1,4 @@
+****Day1 => completed
 create project from the scratch =>(Javascript) =>Done
 tailwind css =>done
 add first splash screen  (figma)=>done => working
@@ -6,6 +7,6 @@ add main splash screen =>Done
 
 
 
-
+****DAY 2
 Log in , Log out, Forgot Password
 get started screen

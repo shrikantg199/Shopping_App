@@ -9,11 +9,13 @@ import {
 } from "react-native";
 import React, { useRef, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useRouter } from "expo-router";
 
 const SplashScreen = () => {
   const screenWidth = Dimensions.get("window").width;
   const [activeIndex, setActiveIndex] = useState(0);
   const ImageRef = useRef(null);
+  const router = useRouter();
   const ImageData = [
     {
       id: 1,
@@ -69,7 +71,7 @@ const SplashScreen = () => {
           <Text className="text-xl font-medium">/</Text>
           <Text className="text-xl font-medium">{ImageData.length}</Text>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push("/login")}>
           <Text className="text-xl text-gray-500">Skip</Text>
         </TouchableOpacity>
       </View>
@@ -117,7 +119,10 @@ const SplashScreen = () => {
             ))}
           </View>
           {activeIndex === ImageData.length - 1 ? (
-            <TouchableOpacity className="" onPress={handleNext}>
+            <TouchableOpacity
+              className=""
+              onPress={() => router.push("/login")}
+            >
               <Text className="text-pink-600 text-xl font-medium">
                 Get Started
               </Text>
