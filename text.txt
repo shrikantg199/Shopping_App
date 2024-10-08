@@ -7,6 +7,20 @@ add main splash screen =>Done
 
 
 
-****DAY 2
+****DAY 2 => completed
 Log in , Log out, Forgot Password
 get started screen
+
+****Day 3
+changes => 
+main splash screen to onboarding =>done
+rename signin =>done
+create tabs =>Done
+create drawer =>
+drawer setup
+menu & icon =>done
+too much errors(bundle issue,package issue(gesture ))
+at the end all Good😁😁😁😁=>
+
+
+

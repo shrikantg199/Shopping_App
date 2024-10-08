@@ -12,8 +12,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Entypo, MaterialCommunityIcons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 
-const login = memo(() => {
+const login = () => {
   const router = useRouter();
+  const handleLogIn = () => {
+    //
+  };
   const socialIcons = [
     {
       id: 1,
@@ -29,7 +32,7 @@ const login = memo(() => {
     },
   ];
   return (
-    <SafeAreaView className="bg-white h-screen">
+    <SafeAreaView className="bg-white h-screen flex-1">
       <View className="mx-6 my-8 mb-10 w-52">
         <Text className="text-4xl font-bold">Welcome Back!</Text>
       </View>
@@ -45,12 +48,15 @@ const login = memo(() => {
           <TextInput placeholder="Password" className="" />
         </View>
         {/* Login Button */}
-        <TouchableOpacity className="bg-[#F83758] mx-10 py-3 rounded-full ">
+        <TouchableOpacity
+          onPress={handleLogIn}
+          className="bg-[#F83758] mx-10 py-3 rounded-full "
+        >
           <Text className="text-center text-white text-xl">Log in</Text>
         </TouchableOpacity>
         {/* forgot Password */}
 
-        <TouchableOpacity onPress={()=>router.push("/forgotpassword")}>
+        <TouchableOpacity onPress={() => router.push("/forgotpassword")}>
           <Text className="text-center underline mt-2 text-[#F83758] ">
             Forgot Password ?
           </Text>
@@ -79,7 +85,7 @@ const login = memo(() => {
       </View>
     </SafeAreaView>
   );
-});
+};
 
 export default login;
 

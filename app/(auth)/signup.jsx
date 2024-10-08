@@ -29,7 +29,7 @@ const SignUp = memo(() => {
     },
   ];
   return (
-    <SafeAreaView className="bg-white h-screen">
+    <SafeAreaView className="bg-white h-screen flex-1">
       <View className="mx-6 my-8 mb-10 w-52">
         <Text className="text-4xl font-bold">Create an Account</Text>
       </View>
@@ -52,11 +52,11 @@ const SignUp = memo(() => {
         <TouchableOpacity className="bg-[#F83758] mx-10 py-3 rounded-full ">
           <Text className="text-center text-white text-xl">Sign Up</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => router.push("/signup")} className="">
-          <Text className="text-center mt-2 w-60 mx-10">
+        
+          <Text className="mx-auto mt-2 w-60 ">
             By clicking the Register button, you agree to the public offer
           </Text>
-        </TouchableOpacity>
+        
       </View>
       <View className="my-8">
         <Text className="text-center ">Or Continue With</Text>
@@ -74,7 +74,7 @@ const SignUp = memo(() => {
         />
         <View className="flex flex-row my-3">
           <Text>I Already Have an Account? </Text>
-          <TouchableOpacity onPress={() => router.push("/login")}>
+          <TouchableOpacity onPress={() => router.push("/signin")}>
             <Text className="text-[#F83758] underline">Log In</Text>
           </TouchableOpacity>
         </View>
