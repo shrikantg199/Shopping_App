@@ -52,11 +52,10 @@ const SignUp = memo(() => {
         <TouchableOpacity className="bg-[#F83758] mx-10 py-3 rounded-full ">
           <Text className="text-center text-white text-xl">Sign Up</Text>
         </TouchableOpacity>
-        
-          <Text className="mx-auto mt-2 w-60 ">
-            By clicking the Register button, you agree to the public offer
-          </Text>
-        
+
+        <Text className="mx-auto mt-2 w-60 ">
+          By clicking the Register button, you agree to the public offer
+        </Text>
       </View>
       <View className="my-8">
         <Text className="text-center ">Or Continue With</Text>

@@ -15,7 +15,7 @@ import { useRouter } from "expo-router";
 const login = () => {
   const router = useRouter();
   const handleLogIn = () => {
-    //
+    router.push("/");
   };
   const socialIcons = [
     {

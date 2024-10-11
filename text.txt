@@ -22,5 +22,9 @@ menu & icon =>done
 too much errors(bundle issue,package issue(gesture ))
 at the end all Good😁😁😁😁=>
 
+*****Day 4
+lets check =>Done
+tabbar design =>(Home,Wishlist,Cart,Search,Setting) =>Done
+Home page design =>50%=>Done
 
 

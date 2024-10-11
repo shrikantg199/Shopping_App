@@ -4,10 +4,10 @@ import { Stack, useRouter } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 SplashScreen.preventAutoHideAsync();
 const RootLayout = () => {
-  const [isAuth, setIsAuth] = useState(true);
+  const [isAuth, setIsAuth] = useState(false);
   const router = useRouter();
   useEffect(() => {
-    if (!isAuth) {
+    if (isAuth) {
       router.push("/onboarding");
     }
   }, [isAuth]);
