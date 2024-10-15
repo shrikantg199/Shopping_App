@@ -27,4 +27,11 @@ lets check =>Done
 tabbar design =>(Home,Wishlist,Cart,Search,Setting) =>Done
 Home page design =>50%=>Done
 
+*****day 5 
+lets check All=> done
 
+
+*****day 6 
+tabBar style=> Done
+banner add=> Done
+create component  =>Product=>done

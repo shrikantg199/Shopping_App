@@ -10,6 +10,11 @@ const TabStructure = () => {
         headerShown: false,
         tabBarInactiveTintColor: "black",
         tabBarHideOnKeyboard: true,
+        tabBarLabelStyle: {
+          fontSize: 13,
+          marginTop: -4,
+          marginBottom: 2,
+        },
       }}
     >
       <Tabs.Screen
@@ -38,13 +43,17 @@ const TabStructure = () => {
         options={{
           tabBarLabel: () => null,
 
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({ focused }) => (
             <View
-              className={` mb-[2px] p-3  rounded-full  ${
-                color ? "bg-[#EB3030]" : "bg-white"
+              className={` mb-[2px] p-4 -mt-5  rounded-full  ${
+                focused ? "bg-[#EB3030]" : "bg-white shadow-xl shadow-black"
               }`}
             >
-              <Feather name="shopping-cart" size={24} color="white" />
+              <Feather
+                name="shopping-cart"
+                size={24}
+                color={focused ? "white" : "black"}
+              />
             </View>
           ),
         }}

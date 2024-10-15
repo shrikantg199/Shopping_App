@@ -1,4 +1,11 @@
-import { FlatList, StyleSheet, Text, TextInput, View } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  ScrollView,
+} from "react-native";
 import React, { useState } from "react";
 import {
   FontAwesome,
@@ -10,22 +17,27 @@ import categories from "../../constants/categories";
 
 const Category = () => {
   const [categoryData, setCategoryData] = useState(categories);
-  console.log(categories);
+
+  const bannerImage = [
+    {
+      id: "1",
+      img: require("../../assets/banner/electronicsBanner.png"),
+    },
+    {
+      id: "2",
+      img: require("../../assets/banner/fashionBanner.png"),
+    },
+  ];
+
   return (
     <View>
-      {/* Search bar */}
-      <View className="bg-white  py-[12px] mx-4 my-3 px-3 rounded-3xl shadow-lg shadow-black flex flex-row items-center ">
-        <FontAwesome name="search" size={18} color="gray" />
-        <TextInput placeholder="search" className="text-gray-400 mx-1 " />
-      </View>
-
       {/* Category row */}
       <View className="flex flex-row justify-between items-center mx-3">
-        <Text className="text-xl font-bold">All Featured </Text>
+        <Text className="text-xl font-bold">All Featured</Text>
         <View className="flex flex-row gap-3">
           <View className="flex flex-row items-center">
             <FontAwesome5 name="sort-amount-up" size={20} color="black" />
-            <Text className="text-base">sort</Text>
+            <Text className="text-base">Sort</Text>
           </View>
           <View className="flex flex-row items-center">
             <MaterialCommunityIcons name="filter" size={20} color="black" />
@@ -34,17 +46,35 @@ const Category = () => {
         </View>
       </View>
 
-      {/* Category  */}
-      <FlatList
-        data={categoryData}
-        horizontal={true}
-        showsHorizontalScrollIndicator={false}
-        renderItem={({ item }) => (
-          <View>
+      {/* Categories */}
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        {categoryData.map((item) => (
+          <View key={item.id}>
             <CategoryItems category={item} />
           </View>
-        )}
-      />
+        ))}
+      </ScrollView>
+
+      {/* Offers */}
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        className="mx-2"
+      >
+        {bannerImage.map((item) => (
+          <View key={item.id}>
+            <Image
+              source={item.img}
+              className="w-screen h-44 mx-2 rounded-2xl object-cover"
+            />
+          </View>
+        ))}
+      </ScrollView>
+      <View className="m-2 flex flex-row justify-center items-center">
+        {bannerImage.map((item, index) => (
+          <View key={index} className="bg-red-500 w-2 h-2 m-1 rounded-full" />
+        ))}
+      </View>
     </View>
   );
 };
