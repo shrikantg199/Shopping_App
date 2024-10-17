@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-      "id": 1, 
+      "id": 1,
       "name": "Men",
       "products": [
         {
@@ -10,7 +10,7 @@
           "description": "Stylish casual shirt for men",
           "price": 29.99,
           "sizes": ["S", "M", "L", "XL"],
-          "rating": 4.5,
+          "rating": 4,
           "imageUrl": "https://m.media-amazon.com/images/I/61jP8mz3XIL._SX679_.jpg",
           "stock": 50
         },
@@ -20,7 +20,7 @@
           "description": "Comfortable chino pants for men",
           "price": 39.99,
           "sizes": ["30", "32", "34", "36"],
-          "rating": 4.6,
+          "rating": 3,
           "imageUrl": "https://m.media-amazon.com/images/I/81rHWBHIOyL._SX522_.jpg",
           "stock": 40
         }
@@ -88,7 +88,7 @@
           "description": "Leather belt for men",
           "price": 24.99,
           "sizes": ["M", "L"],
-          "rating": 4.6,
+          "rating": 4,
           "imageUrl": "https://m.media-amazon.com/images/I/71upwpduqrL._SX679_.jpg",
           "stock": 30
         },
@@ -98,7 +98,7 @@
           "description": "Trendy handbag for women",
           "price": 89.99,
           "sizes": ["One Size"],
-          "rating": 4.7,
+          "rating": 4,
           "imageUrl": "https://m.media-amazon.com/images/I/6151MAuWlzL._SY575_.jpg",
           "stock": 20
         }

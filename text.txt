@@ -35,3 +35,16 @@ lets check All=> done
 tabBar style=> Done
 banner add=> Done
 create component  =>Product=>done
+
+
+***day 7 
+lets check all=>Done
+add star rating=> done
+category on change =>Done
+
+****day 8 (tomorrow)
+auto scroll image =>
+routing =>
+Wishlist=>
+cart =>
+

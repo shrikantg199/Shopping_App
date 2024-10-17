@@ -5,6 +5,7 @@ import {
   TextInput,
   View,
   ScrollView,
+  FlatList,
 } from "react-native";
 import React, { useState } from "react";
 import {
@@ -15,7 +16,7 @@ import {
 import CategoryItems from "./CategoryItems";
 import categories from "../../constants/categories";
 
-const Category = () => {
+const Category = ({ SetCategory }) => {
   const [categoryData, setCategoryData] = useState(categories);
 
   const bannerImage = [
@@ -56,20 +57,22 @@ const Category = () => {
       </ScrollView>
 
       {/* Offers */}
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        className="mx-2"
-      >
-        {bannerImage.map((item) => (
-          <View key={item.id}>
-            <Image
-              source={item.img}
-              className="w-screen h-44 mx-2 rounded-2xl object-cover"
-            />
-          </View>
-        ))}
-      </ScrollView>
+      <View className="w-screen ">
+        <FlatList
+          data={bannerImage}
+          keyExtractor={(item) => item.id.toString()}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          renderItem={({ item }) => (
+            <View>
+              <Image
+                source={item.img}
+                className="w-[375px] h-44 mx-2 rounded-2xl"
+              />
+            </View>
+          )}
+        />
+      </View>
       <View className="m-2 flex flex-row justify-center items-center">
         {bannerImage.map((item, index) => (
           <View key={index} className="bg-red-500 w-2 h-2 m-1 rounded-full" />
