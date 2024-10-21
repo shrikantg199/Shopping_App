@@ -23,7 +23,7 @@ const index = () => {
     <SafeAreaView className="bg-white h-screen my-2">
       <ScrollView verticle showsVerticalScrollIndicator={false}>
         <Header />
-        <Category setCategory={setCategory} />
+        <Category SetCategory={setCategory} />
         <Product selectedCategory={selectedCategory} />
       </ScrollView>
     </SafeAreaView>

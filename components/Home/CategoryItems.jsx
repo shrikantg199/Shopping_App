@@ -2,9 +2,10 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { TouchableOpacity } from "react-native";
 
-const CategoryItems = ({ category,setCategory }) => {
+const CategoryItems = ({ category, setCategory }) => {
   return (
     <TouchableOpacity
+      activeOpacity={0.4}
       onPress={() => setCategory(category.category)}
       className="mx-3 items-center my-4"
     >

@@ -42,7 +42,7 @@ lets check all=>Done
 add star rating=> done
 category on change =>Done
 
-****day 8 (tomorrow)
+****day 8 
 auto scroll image =>
 routing =>
 Wishlist=>

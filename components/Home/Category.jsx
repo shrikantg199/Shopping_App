@@ -51,7 +51,7 @@ const Category = ({ SetCategory }) => {
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {categoryData.map((item) => (
           <View key={item.id}>
-            <CategoryItems category={item} />
+            <CategoryItems category={item} setCategory={SetCategory} />
           </View>
         ))}
       </ScrollView>

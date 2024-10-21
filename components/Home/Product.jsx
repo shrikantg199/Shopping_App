@@ -6,6 +6,7 @@ import { useRouter } from "expo-router";
 import StarRating from "react-native-star-rating-widget";
 const Product = ({ selectedCategory }) => {
   const [categories] = useState(data.categories);
+
   // console.log(selectedCategory);
   const filterItems = selectedCategory
     ? categories.filter((item) => item.name === selectedCategory)
@@ -15,7 +16,7 @@ const Product = ({ selectedCategory }) => {
     <View>
       <View className=" mx-2 flex flex-wrap flex-row mb-3 ">
         {filterItems.map((category) => (
-          <View className="" key={category.id}>
+          <View className="flex flex-row " key={category.id}>
             {category.products.map((item) => (
               <View className="" key={item.id}>
                 <TouchableOpacity
