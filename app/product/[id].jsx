@@ -5,6 +5,7 @@ import { useLocalSearchParams, useRouter } from "expo-router";
 import data from "../../data.json";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native";
+import StarRating from "react-native-star-rating-widget";
 
 const ProductDetails = memo(() => {
   const [productItem, setProductItem] = useState("");
@@ -42,7 +43,26 @@ const ProductDetails = memo(() => {
             <Text>no</Text>
           )}
         </View>
-        <Text>{productItem.name}</Text>
+        <Text className="text-2xl font-bold mx-3 ">{productItem.name}</Text>
+        <Text className="mx-4">{productItem.description}</Text>
+        {/* rating */}
+        <StarRating
+          rating={productItem.rating || 0}
+          starSize={24}
+          style={{ marginHorizontal: 16 }}
+          starStyle={{ marginHorizontal: -1 }}
+        />
+        <Text className="text-xl font-bold mx-4">{productItem.price}$</Text>
+      </View>
+      <View className="absolute bottom-4 ">
+        <View className="flex flex-row px-2 justify-between w-screen items-center ">
+          <TouchableOpacity className="bg-blue-600 px-2 py-2 rounded-xl">
+            <Text className="text-white text-xl">add to cart</Text>
+          </TouchableOpacity>
+          <TouchableOpacity className="bg-green-400 px-2 py-2 rounded-xl">
+            <Text className="text-white text-xl">buy Now</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </SafeAreaView>
   );

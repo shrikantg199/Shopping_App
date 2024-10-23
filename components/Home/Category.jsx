@@ -49,13 +49,13 @@ const Category = ({ SetCategory }) => {
       {/* Category row */}
       <View className="flex flex-row justify-between items-center mx-3">
         <Text className="text-xl font-bold">All Featured</Text>
-        <View className="flex flex-row gap-3">
-          <View className="flex flex-row items-center">
-            <FontAwesome5 name="sort-amount-up" size={20} color="black" />
+        <View className="flex flex-row gap-3 ">
+          <View className="flex flex-row items-center bg-white shadow-xl shadow-black px-2 py-1 rounded-lg">
+            <FontAwesome5 name="sort-amount-up" size={16} color="black" />
             <Text className="text-base">Sort</Text>
           </View>
-          <View className="flex flex-row items-center">
-            <MaterialCommunityIcons name="filter" size={20} color="black" />
+          <View className="flex flex-row items-center bg-white shadow-xl shadow-black px-2 py-1 rounded-lg">
+            <MaterialCommunityIcons name="filter" size={16} color="black" />
             <Text className="text-base">Filter</Text>
           </View>
         </View>

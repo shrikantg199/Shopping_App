@@ -47,6 +47,8 @@ lets check all=>All set
 auto  image scroll=> Done
 Wishlist=> Done
 
+
+
 routing =>
 cart =>
 
