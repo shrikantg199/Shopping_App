@@ -21,7 +21,7 @@ const Product = ({ selectedCategory }) => {
               <View className="" key={item.id}>
                 <TouchableOpacity
                   onPress={() => router.push(`/product/${item.id}`)}
-                  className="bg-white shadow-lg shadow-black w-44 h-[300px] rounded-2xl my-3  mx-1 pt-3"
+                  className="bg-white shadow-lg shadow-black w-44 h-[320px] rounded-2xl my-3  mx-1 pt-3"
                 >
                   <Image
                     source={{ uri: item.imageUrl }}
@@ -34,17 +34,15 @@ const Product = ({ selectedCategory }) => {
                         "..."}
                     </Text>
                   </View>
-                  <View className="flex  mx-2 bottom-4 flex-row justify-between items-center ">
+                  <View className=" mx-4 bottom-4  ">
                     <Text className="text-lg font-bold ">{item.price} $</Text>
 
                     {/* star rating */}
-                    <View className="">
-                      <StarRating
-                        rating={item.rating}
-                        starSize={20}
-                        starStyle={{ marginHorizontal: -1 }}
-                      />
-                    </View>
+                    <StarRating
+                      rating={item.rating}
+                      starSize={20}
+                      starStyle={{ marginHorizontal: -1 }}
+                    />
                   </View>
                 </TouchableOpacity>
               </View>

@@ -64,8 +64,8 @@ const OnBoarding = () => {
     }
   };
   return (
-    <SafeAreaView className="flex-1">
-      <View className="flex flex-row justify-between items-center px-2">
+    <SafeAreaView className="flex-1 bg-white h-screen">
+      <View className="flex flex-row justify-between items-center px-2 ">
         <View className="flex flex-row ">
           <Text className="text-xl font-medium">{activeIndex + 1}</Text>
           <Text className="text-xl font-medium">/</Text>
@@ -82,7 +82,7 @@ const OnBoarding = () => {
         onScroll={handleScroll}
         showsHorizontalScrollIndicator={false}
         renderItem={({ item }) => (
-          <View className=" justify-center items-center">
+          <View className=" justify-center items-center ">
             <Image
               source={item.image}
               className="w-screen h-[200px] object-cover"

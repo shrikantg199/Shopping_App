@@ -7,7 +7,7 @@ import {
   ScrollView,
   FlatList,
 } from "react-native";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   FontAwesome,
   FontAwesome5,
@@ -18,7 +18,8 @@ import categories from "../../constants/categories";
 
 const Category = ({ SetCategory }) => {
   const [categoryData, setCategoryData] = useState(categories);
-
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const FlatRef = useRef(null);
   const bannerImage = [
     {
       id: "1",
@@ -29,7 +30,20 @@ const Category = ({ SetCategory }) => {
       img: require("../../assets/banner/fashionBanner.png"),
     },
   ];
-
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) =>
+        prev === bannerImage.length - 1 ? 0 : prev + 1
+      );
+    }, 4000);
+    return () => clearInterval(interval);
+  });
+  useEffect(() => {
+    FlatRef.current.scrollToIndex({
+      index: currentIndex,
+      animated: true,
+    });
+  }, [currentIndex]);
   return (
     <View>
       {/* Category row */}
@@ -60,6 +74,7 @@ const Category = ({ SetCategory }) => {
       <View className="w-screen ">
         <FlatList
           data={bannerImage}
+          ref={FlatRef}
           keyExtractor={(item) => item.id.toString()}
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -73,9 +88,14 @@ const Category = ({ SetCategory }) => {
           )}
         />
       </View>
-      <View className="m-2 flex flex-row justify-center items-center">
+      <View className="m-2 my-2 flex flex-row justify-center items-center">
         {bannerImage.map((item, index) => (
-          <View key={index} className="bg-red-500 w-2 h-2 m-1 rounded-full" />
+          <View
+            key={index}
+            className={` w-2 h-2 m-1 rounded-full ${
+              currentIndex === index ? "bg-green-500" : "bg-red-300"
+            }`}
+          />
         ))}
       </View>
     </View>

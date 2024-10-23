@@ -7,7 +7,7 @@
         {
           "id": 101,
           "name": "Casual Shirt",
-          "description": "Stylish casual shirt for men",
+          "description": "Stylish casual shirt designed for comfort and versatility, perfect for everyday wear or casual outings.",
           "price": 29.99,
           "sizes": ["S", "M", "L", "XL"],
           "rating": 4,
@@ -17,7 +17,7 @@
         {
           "id": 102,
           "name": "Chino Pants",
-          "description": "Comfortable chino pants for men",
+          "description": "Comfortable chino pants made from soft fabric, ideal for both casual and semi-formal occasions.",
           "price": 39.99,
           "sizes": ["30", "32", "34", "36"],
           "rating": 3,
@@ -33,20 +33,20 @@
         {
           "id": 201,
           "name": "Summer Dress",
-          "description": "Lightweight summer dress",
+          "description": "Lightweight summer dress, perfect for warm weather outings. Features a flattering fit and breathable fabric.",
           "price": 39.99,
           "sizes": ["S", "M", "L"],
-          "rating": 4.6,
+          "rating": 2,
           "imageUrl": "https://m.media-amazon.com/images/I/51U32xC0sSL._SY679_.jpg",
           "stock": 30
         },
         {
           "id": 202,
           "name": "Blazer",
-          "description": "Elegant blazer for women",
+          "description": "Elegant blazer for women, tailored for a sophisticated look, suitable for professional settings and special occasions.",
           "price": 89.99,
           "sizes": ["S", "M", "L"],
-          "rating": 4.7,
+          "rating": 4,
           "imageUrl": "https://m.media-amazon.com/images/I/51V5FjVALVL._SY679_.jpg",
           "stock": 20
         }
@@ -59,20 +59,20 @@
         {
           "id": 301,
           "name": "T-Shirt",
-          "description": "Colorful cotton t-shirt for kids",
+          "description": "Colorful cotton t-shirt for kids, designed for comfort and fun, making it a great addition to any wardrobe.",
           "price": 14.99,
           "sizes": ["S", "M", "L"],
-          "rating": 4.6,
+          "rating": 4,
           "imageUrl": "https://m.media-amazon.com/images/I/71novhku+XL._SX679_.jpg",
           "stock": 60
         },
         {
           "id": 302,
           "name": "Shorts",
-          "description": "Comfortable shorts for kids",
+          "description": "Comfortable shorts for kids, perfect for playtime or warm days. Made from durable, breathable fabric.",
           "price": 19.99,
           "sizes": ["S", "M", "L"],
-          "rating": 4.4,
+          "rating": 4,
           "imageUrl": "https://m.media-amazon.com/images/I/71A76XELdsL._SX522_.jpg",
           "stock": 50
         }
@@ -85,7 +85,7 @@
         {
           "id": 401,
           "name": "Men's Belt",
-          "description": "Leather belt for men",
+          "description": "Stylish leather belt for men, designed for durability and fashion, perfect for both casual and formal attire.",
           "price": 24.99,
           "sizes": ["M", "L"],
           "rating": 4,
@@ -95,7 +95,7 @@
         {
           "id": 402,
           "name": "Women's Handbag",
-          "description": "Trendy handbag for women",
+          "description": "Trendy handbag for women, combining style and practicality, suitable for daily use or special occasions.",
           "price": 89.99,
           "sizes": ["One Size"],
           "rating": 4,

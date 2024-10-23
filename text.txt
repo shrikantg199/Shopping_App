@@ -43,8 +43,10 @@ add star rating=> done
 category on change =>Done
 
 ****day 8 
-auto scroll image =>
+lets check all=>All set
+auto  image scroll=> Done
+Wishlist=> Done
+
 routing =>
-Wishlist=>
 cart =>
 

@@ -1,18 +1,52 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
-import React, { useState } from "react";
+import { FlatList, Image, StyleSheet, Text, View } from "react-native";
+import React, { memo, useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useLocalSearchParams } from "expo-router";
+import { useLocalSearchParams, useRouter } from "expo-router";
 import data from "../../data.json";
-const ProductDetails = () => {
-  const { id } = useLocalSearchParams();
+import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
+import { TouchableOpacity } from "react-native";
 
+const ProductDetails = memo(() => {
+  const [productItem, setProductItem] = useState("");
+  const { id } = useLocalSearchParams();
+  const router = useRouter();
+
+  useEffect(() => {
+    const foundProduct = data.categories
+      .flatMap((Category) => Category.products)
+      .find((product) => product.id.toString() === id);
+    setProductItem(foundProduct);
+  }, [id]);
   return (
     <SafeAreaView className="bg-white h-screen flex-1">
-      {/* <FlatList /> */}
-      <Text>{id}</Text>
+      {/* back Button */}
+      <View className="flex flex-row justify-between mx-4">
+        <TouchableOpacity onPress={() => router.back()}>
+          <Ionicons name="chevron-back" size={32} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push("/cart")}>
+          <MaterialCommunityIcons name="cart-outline" size={28} color="black" />
+        </TouchableOpacity>
+      </View>
+
+      {/* product Details */}
+      <View className="">
+        <View className="">
+          {productItem.imageUrl ? (
+            <Image
+              source={{ uri: productItem.imageUrl }}
+              className="h-80 w-screen  "
+              resizeMode="contain"
+            />
+          ) : (
+            <Text>no</Text>
+          )}
+        </View>
+        <Text>{productItem.name}</Text>
+      </View>
     </SafeAreaView>
   );
-};
+});
 
 export default ProductDetails;
 
